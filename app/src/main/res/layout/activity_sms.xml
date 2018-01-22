@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:padding="10dp"
+tools:context="com.example.user.week2weekendproject.SMSActivity"
+    >
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Enter the phone number of recipient"
+    />
+<EditText
+    android:id="@+id/txtPhoneNo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    />
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Message"
+    />
+<EditText
+    android:id="@+id/txtMessage"
+    android:layout_width="fill_parent"
+    android:layout_height="150px"
+    android:gravity="top"
+    />
+<Button
+    android:id="@+id/btnSendSMS"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Send SMS"
+    />
+
+    <TextView
+        android:id="@+id/textMsg"
+        android:layout_width="match_parent"
+
+        android:paddingTop="20dp"
+        android:layout_height="148dp"
+        android:text="TextView" />
+</LinearLayout>
