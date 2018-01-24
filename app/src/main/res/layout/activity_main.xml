@@ -10,16 +10,13 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="91dp"
-        android:layout_height="84dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="64dp"
         android:onClick="onHandlePdfClicked"
-        app:layout_constraintBottom_toBottomOf="@+id/button_show_notif"
-        app:layout_constraintEnd_toStartOf="@+id/button_show_notif"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/button_show_notif"
         app:srcCompat="@drawable/ic_pdf" />
 
 
@@ -29,23 +26,49 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="32dp"
-        android:text="Send notification"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:onClick="OnNotificationSend"
+        android:text="Send notification"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="161dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:layout_marginEnd="24dp"
-        android:text="Message sender"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:onClick="OnSMSSender"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:text="Message sender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_show_notif" />
 
+    <fragment
+        android:id="@+id/frag1"
+        android:name="com.example.user.week2weekendproject.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <fragment
+        android:id="@+id/frag2"
+        android:name="com.example.user.week2weekendproject.FragmentTwo"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_below="@+id/frag1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag1" />
 
 </android.support.constraint.ConstraintLayout>

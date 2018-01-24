@@ -1,6 +1,7 @@
 package com.example.user.week2weekendproject;
 
 import android.app.AlertDialog;
+import android.app.FragmentManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -17,7 +18,7 @@ import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Communications  {
 
     NotificationManager notificationManager;
     private static final String id = "45612";
@@ -125,5 +126,14 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(getApplicationContext(), SMSActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void listener(String data) {
+
+           // FragmentManager fragmentManager = getFragmentManager();
+            FragmentTwo  fragmentTwo  = (FragmentTwo) getSupportFragmentManager().findFragmentById(R.id.frag2);
+        fragmentTwo.updateCounter(data);
+
     }
 }
